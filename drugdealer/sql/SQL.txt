@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS `player_dealers` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `citizenid` VARCHAR(50) NOT NULL,
+  `dealer_index` INT NOT NULL,
+  `name` VARCHAR(50),
+  `drugs` JSON DEFAULT NULL,
+  `cash` INT DEFAULT 0,
+  `total_earned` INT DEFAULT 0,
+  `status` VARCHAR(20) DEFAULT 'idle',
+  `last_location` VARCHAR(255) DEFAULT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
